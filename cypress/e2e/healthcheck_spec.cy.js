@@ -9,17 +9,17 @@ describe('HTTP Requests', ()=> {
 
 
 
-// describe('API CALL', ()=> {
+describe('API CALL', ()=> {
 
-//   it('GET Call', ()=> {
+  it('GET Call', ()=> {
 
-//     cy.request('GET', 'https://restful-booker.herokuapp.com/ping')
-//       .its('status')
-//       .should('equal', 201);
+    cy.request('GET', 'https://restful-booker.herokuapp.com/ping')
+      .its('status')
+      .should('equal', 201);
 
-//   })
+  })
 
-// })
+})
 
 
 
