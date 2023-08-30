@@ -31,7 +31,8 @@ describe('template spec', () => {
 
     // now all of those but with the 'input tag'
     // cy.get('input#email1').type('tagtest')
-    cy.get('input.form-control.action-email').type('tagtest2')
+    // cy.get('input.form-control.action-email').type('tagtest2')
+    cy.get('input.')
 
 
   })
