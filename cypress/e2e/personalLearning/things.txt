@@ -1,0 +1,35 @@
+locators
+---------
+
+CSS Selectors
+XPath
+
+cy.get(locator)
+
+
+CSS Selectors
+-------------
+
+tag id
+tag class
+tag attribute
+tag class attribute
+
+('tag' can be '<input>' or '<form>' ETC)
+
+
+how to locate something in a website using the html/css code (syntax) -->
+
+#id
+.class
+[attribute="value"] <-- specify the attribute 
+
+or
+
+.class[attribute="value"]
+
+or
+
+tag.#id
+tag.class --> ex: ul<-- (a tag).home-list <-- (the class of home-list)>li>a
+tag.[attribute="value"]

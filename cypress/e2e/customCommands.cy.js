@@ -14,7 +14,12 @@ describe('template spec', () => {
       });
 
       cy.clickActionsLink()
-      cy.typeMyName()
+      // cy.typeMyName()
+
+      // cy.get('input#email1').type('n')
+
+
+
 
     })
   })
