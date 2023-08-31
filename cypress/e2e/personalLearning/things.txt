@@ -4,7 +4,7 @@ locators
 CSS Selectors
 XPath
 
-cy.get(locator)
+cy.get(locator) <-- for CSS
 
 
 CSS Selectors
@@ -23,13 +23,31 @@ how to locate something in a website using the html/css code (syntax) -->
 #id
 .class
 [attribute="value"] <-- specify the attribute 
-
-or
-
 .class[attribute="value"]
 
 or
 
 tag.#id
 tag.class --> ex: ul<-- (a tag).home-list <-- (the class of home-list)>li>a
-tag.[attribute="value"]
+tag.class.[attribute="value"]
+
+
+XPath
+------
+
+cy.xpath <-- for xpath
+
+
+
+Assertions
+----------
+
+1) implicit <-- built in and supported by cypress directly
+
+    .should()
+    .and()
+
+2) explicit <-- need to write explicity
+
+    .expect()
+    .assert()

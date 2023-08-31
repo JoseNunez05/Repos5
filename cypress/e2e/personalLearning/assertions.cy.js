@@ -40,29 +40,26 @@ describe('Assertions demo', () => {
                 cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
                 cy.get('input[placeholder="Username"]').type('Admin')
+                cy.get('input[placeholder="Username"]').should('have.value', 'Admin')
+
                 cy.get('input[placeholder="Password"]').type('admin123')
+                cy.get('input[placeholder="Password"]').should('have.value', 'admin123')
+
                 cy.get('button[type="submit"]').click()
 
                 // since explicit assertions cannot be directly used via cypress, we have to create a javaScript function
 
-                let name="Paul Collings";
-                let fakename="Caul Pollings"
+                let name="Vinay Reddy";
+                let fakename="Rinay Veddy"
 
-                cy.get('.oxd-userdropdown-name').then( (x) => {
+                cy.get('.oxd-userdropdown-name').then( (d) => {
 
-                    let realName = x.text()
+                    let forRealName = d.text() // the text value of the element
 
-                    //BDD style
-                    expect(realName).to.equal(name)
-                    expect(realName).to.not.equal(fakename)
-
-                    //TDD Style
-                    assert.equal(realName, name)
-                    assert.notEqual(realName, fakename)
+                    expect(forRealName).to.not.equal(fakename)
+                    assert.equal(forRealName, name) // cannot use equal assertion for forRealName and d since forRealName overtakes d as the new variable.
 
                 })
-
-
 
             })
 
@@ -70,3 +67,29 @@ describe('Assertions demo', () => {
     // })
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+// cy.get('.oxd-userdropdown-name').then( (x) => {
+
+//     let realName = x.text()
+
+//     //BDD style
+//     expect(realName).to.equal(name)
+//     expect(realName).to.not.equal(fakename)
+
+//     //TDD Style
+//     assert.equal(realName, name)
+//     assert.notEqual(realName, fakename)
+
+// })
