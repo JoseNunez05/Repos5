@@ -45,9 +45,23 @@ Assertions
 1) implicit <-- built in and supported by cypress directly
 
     .should()
+        eq
+        contain
+        include
+        exist
+        have.length
+        have.value
+        be.checked
+        not.be.checked
+
     .and()
 
 2) explicit <-- need to write explicity
 
     .expect()
+        .to.equal
+        .to.notEqual
+
     .assert()
+        .equal
+        .notEqual
