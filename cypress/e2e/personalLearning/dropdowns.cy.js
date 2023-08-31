@@ -54,9 +54,7 @@ describe('dropdowns', () => {
 
                         // if the text value of the element is equal to "cypress automation tool" then perform the following actions
                         if($el.text() == "cypress automation tool"){
-
-                            
-                            
+                            cy.wrap($el).click()
                         }
 
                     })
