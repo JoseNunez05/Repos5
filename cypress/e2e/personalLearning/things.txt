@@ -53,6 +53,7 @@ Assertions
         have.value
         be.checked
         not.be.checked
+        have.text
 
     .and()
 
