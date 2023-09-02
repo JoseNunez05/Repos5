@@ -26,3 +26,19 @@
 
 // <reference types='Cypress' />
 /// <reference types='cypress-xpath' />
+
+Cypress.Commands.add('typeMyName', (p1, p2) => {
+    cy.get('input#email1.form-control.action-email')
+      .type('Jose Nunez')
+  });
+
+
+
+
+// creating a custom command (from the frames file of personalLearning folder).
+
+Cypress.Commands.add('iframeInteract', (j) => {
+
+    j = cy.get('#mce_0_ifr').its('0.contentDocument.body').then(cy.wrap);
+
+})

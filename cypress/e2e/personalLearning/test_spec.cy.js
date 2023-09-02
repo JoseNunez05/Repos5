@@ -1,41 +1,15 @@
-// describe('first function', ()=> {
+describe('tabs test', () => {
 
-//     it('test1', () =>{    
+    it('tabs', () => {
 
-//       //launching cypress and visiting a website
-//       cy.visit("https://opensource-demo.orangehrmlive.com/")
-      
-//       // making sure the title is OrangeHRM
-//       cy.title().should('eq', 'OrangeHRM')
+      cy.visit('https://the-internet.herokuapp.com/windows')
 
-//     })
+      cy.wait(3000);
 
+      cy.get('[href="/windows/new"]').invoke('removeAttr', 'target').click()
 
-// }) 
+      cy.wait(2000).go('back') // back to parent tab
 
-
-
-// first you write the describe section
-// then the it block
-
-describe('template spec', () => {
-
-  it('CSS Locators', () => {
-
-    cy.visit('https://example.cypress.io/')
-    cy.get('ul.home-list>li>a').contains('Actions').click()
-
-    // cy.get('[type=email]').type('test') // with attribute and class
-    // cy.get('#email1').type('test2')  // with only id
-    // cy.get('.form-control.action-email').type('test3') // with only class
-
-    // now all of those but with the 'input tag'
-    // cy.get('input#email1').type('tagtest')
-    // cy.get('input.form-control.action-email').type('tagtest2')
-    cy.get('input.')
-
-
-  })
-
+    })
 
 })

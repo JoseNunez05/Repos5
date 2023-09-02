@@ -8,17 +8,15 @@ describe('template spec', () => {
           .click()
       });
 
-      Cypress.Commands.add('typeMyName', (p1, p2) => {
-        cy.get('input#email1.form-control.action-email')
-          .type('Jose Nunez')
-      });
+      // Cypress.Commands.add('typeMyName', (p1, p2) => {
+      //   cy.get('input#email1.form-control.action-email')
+      //     .type('Jose Nunez')
+      // });
 
       cy.clickActionsLink()
-      // cy.typeMyName()
+      cy.typeMyName()
 
       // cy.get('input#email1').type('n')
-
-
 
 
     })
