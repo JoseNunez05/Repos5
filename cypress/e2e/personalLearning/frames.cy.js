@@ -1,6 +1,6 @@
 describe('frames', () => {
 
-    it('approach #1', () => {
+    it('approach #1 -manual', () => {
 
         cy.visit('https://the-internet.herokuapp.com/iframe')
 
@@ -16,7 +16,7 @@ describe('frames', () => {
 
     })
 
-        it.only('approach #2', () => {
+        it('approach #2 -custom command', () => {
 
             cy.visit('https://the-internet.herokuapp.com/iframe')
             // cy.iframeInteract('#mce_0_ifr')
@@ -25,4 +25,12 @@ describe('frames', () => {
 
         })
 
+            it.only('approach #3 -cypress plugin', () => {
+
+                cy.visit('https://the-internet.herokuapp.com/iframe')
+
+                // cy.frameLoaded('#mce_0_ifr') // you do not need to load the frame first
+                cy.iframe('#mce_0_ifr').clear().type('old people')
+
+            })
 })

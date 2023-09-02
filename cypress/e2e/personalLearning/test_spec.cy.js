@@ -1,6 +1,6 @@
 describe('tabs test', () => {
 
-    it('tabs', () => {
+    it.skip('tabs', () => {
 
       cy.visit('https://the-internet.herokuapp.com/windows')
 
@@ -11,5 +11,15 @@ describe('tabs test', () => {
       cy.wait(2000).go('back') // back to parent tab
 
     })
+
+})
+
+describe('custom commands test', () => {
+
+  it.skip('login test', () => {
+
+    cy.login('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', 'Admin')
+
+  })
 
 })

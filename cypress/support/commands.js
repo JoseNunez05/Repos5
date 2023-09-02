@@ -27,18 +27,21 @@
 // <reference types='Cypress' />
 /// <reference types='cypress-xpath' />
 
-Cypress.Commands.add('typeMyName', (p1, p2) => {
-    cy.get('input#email1.form-control.action-email')
-      .type('Jose Nunez')
-  });
-
+import 'cypress-iframe'
 
 
 
 // creating a custom command (from the frames file of personalLearning folder).
+Cypress.Commands.add('iframeInteract', (frame) => {
 
-Cypress.Commands.add('iframeInteract', (j) => {
-
-    j = cy.get('#mce_0_ifr').its('0.contentDocument.body').then(cy.wrap);
+    return cy.get(frame).its('0.contentDocument.body').then(cy.wrap);
 
 })
+
+
+
+// Cypress.Commands.add('login', (url, username, password) => {
+    
+//     return cy.visit(url).get('[placeholder="Username"]').type(username)
+
+// })
