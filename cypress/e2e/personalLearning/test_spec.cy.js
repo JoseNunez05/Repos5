@@ -23,3 +23,21 @@ describe('custom commands test', () => {
   })
 
 })
+
+describe('iframe test', () => {
+
+  it('test for frame', () => {
+
+    cy.visit('https://seleniumbase.io/w3schools/iframes')
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      return false
+    })
+
+    cy.frameLoaded('#iframeResult')
+    cy.iframe('#iframeResult').should('exist')
+
+    cy.log('test passed... i think')
+
+  })
+
+})

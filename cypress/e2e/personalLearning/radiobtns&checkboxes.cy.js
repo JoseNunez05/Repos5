@@ -9,7 +9,7 @@ describe('check ui elements', () => {
     //     cy.get('#radio-button1').check()
     //     cy.get('#radio-button2').should('not.be.checked')
 
-    //     // another way of selecting the element insteado of "click" is with "check" in regards to radio btns
+    //     // another way of selecting the element instead of "click" is with "check" in regards to radio btns
     //     cy.get('.form-check-input#radio-button2').should('exist').and('be.visible')
     //     cy.get('.form-check-input#radio-button2').check().should('be.checked')
 

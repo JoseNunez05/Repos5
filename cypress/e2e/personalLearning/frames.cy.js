@@ -27,10 +27,14 @@ describe('frames', () => {
 
             it.only('approach #3 -cypress plugin', () => {
 
-                cy.visit('https://the-internet.herokuapp.com/iframe')
+                cy.visit('https://www.globalsqa.com/demo-site/frames-and-windows/#iFrame')
+                Cypress.on('uncaught:exception', (err, runnable) => {
+                    return false
+                })
 
-                // cy.frameLoaded('#mce_0_ifr') // you do not need to load the frame first
-                cy.iframe('#mce_0_ifr').clear().type('old people')
+                cy.frameLoaded('#aswift_1')
+                // cy.frameLoaded('...') // you do not need to load the frame first
+                
 
             })
 })
