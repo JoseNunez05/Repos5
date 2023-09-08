@@ -32,16 +32,9 @@ import 'cypress-iframe'
 
 
 // creating a custom command (from the frames file of personalLearning folder).
-Cypress.Commands.add('iframeInteract', (frame) => {
-
-    return cy.get(frame).its('0.contentDocument.body').then(cy.wrap);
-
+Cypress.Commands.add('frameChange', (frame) => {
+    cy.get(frame).its('0.contentDocument.body').then(cy.wrap)
 })
 
 
 
-// Cypress.Commands.add('login', (url, username, password) => {
-    
-//     return cy.visit(url).get('[placeholder="Username"]').type(username)
-
-// })

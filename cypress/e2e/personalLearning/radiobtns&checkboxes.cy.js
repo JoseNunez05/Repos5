@@ -1,21 +1,21 @@
 describe('check ui elements', () => {
 
-    // it('radio buttons', () => {
+    it.skip('radio buttons', () => {
 
-    //     cy.visit('https://qa-automation-practice.netlify.app/radiobuttons.html')
+        cy.visit('https://qa-automation-practice.netlify.app/radiobuttons.html')
         
-    //     cy.get('#radio-button1').should('exist').and('be.visible')
-    //     // cy.get('#radio-button1').click()
-    //     cy.get('#radio-button1').check()
-    //     cy.get('#radio-button2').should('not.be.checked')
+        cy.get('#radio-button1').should('exist').and('be.visible')
+        // cy.get('#radio-button1').click()
+        cy.get('#radio-button1').check()
+        cy.get('#radio-button2').should('not.be.checked')
 
-    //     // another way of selecting the element instead of "click" is with "check" in regards to radio btns
-    //     cy.get('.form-check-input#radio-button2').should('exist').and('be.visible')
-    //     cy.get('.form-check-input#radio-button2').check().should('be.checked')
+        // another way of selecting the element instead of "click" is with "check" in regards to radio btns
+        cy.get('.form-check-input#radio-button2').should('exist').and('be.visible')
+        cy.get('.form-check-input#radio-button2').check().should('be.checked')
 
-    //     cy.get('.form-check-input#radio-button1').should('not.be.checked')
+        cy.get('.form-check-input#radio-button1').should('not.be.checked')
 
-    // })
+    })
 
 
         it('check boxes', () => {
@@ -48,6 +48,9 @@ describe('check ui elements', () => {
 
             // selecting the last checkbox
             cy.get('input.form-check-input').last().check()
+            cy.get('input.form-check-input').last().uncheck()
+
+            cy.get('input.form-check-input').first().check()
 
         })
         

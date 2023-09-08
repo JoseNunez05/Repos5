@@ -1,19 +1,19 @@
 describe('dropdowns', () => {
 
-    it.skip('dropdown with select', () => {
+    it('dropdown with select', () => {
 
         cy.visit('https://www.zoho.com/commerce/free-demo.html')
         Cypress.on('uncaught:exception', (err, runnable) => {
             return false
         })
 
-        
+        // .select() is for dropdowns
         cy.get('#zcf_address_country').select('Italy')
 
     })
 
 
-        it.skip('dropdown without select', () => {
+        it('dropdown without select', () => {
 
             cy.visit('https://www.dummyticket.com/dummy-ticket-for-visa-application/')
 
@@ -27,7 +27,7 @@ describe('dropdowns', () => {
         })
 
 
-            it.skip('auto suggested dropdown', () => {
+            it('auto suggested dropdown', () => {
 
                 cy.visit('https://www.wikipedia.org')
 

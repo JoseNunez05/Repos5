@@ -16,23 +16,23 @@ describe('frames', () => {
 
     })
 
-        it('approach #2 -custom command', () => {
+        it.only('approach #2 -custom command', () => {
 
             cy.visit('https://the-internet.herokuapp.com/iframe')
             // cy.iframeInteract('#mce_0_ifr')
 
-            cy.iframeInteract('#mce_0_ifr').clear().type('test')
+            // cy.iframeInteract('#mce_0_ifr').clear().type('test')
+
+            cy.frameChange('#mce_0_ifr').clear().type('frameChange test')
 
         })
 
-            it.only('approach #3 -cypress plugin', () => {
+            it.skip('approach #3 -cypress plugin', () => {
 
-                cy.visit('https://www.globalsqa.com/demo-site/frames-and-windows/#iFrame')
-                Cypress.on('uncaught:exception', (err, runnable) => {
-                    return false
-                })
+                cy.visit('https://the-internet.herokuapp.com/iframe')
 
-                cy.frameLoaded('#aswift_1')
+                cy.frameLoaded('#mce_0_ifr')
+                cy.iframe('#mce_0_ifr').clear().type('test')
                 // cy.frameLoaded('...') // you do not need to load the frame first
                 
 

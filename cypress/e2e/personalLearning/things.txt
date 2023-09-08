@@ -56,13 +56,22 @@ Assertions
         have.text
 
     .and()
+        eq
+        contain
+        include
+        exist
+        have.length
+        have.value
+        be.checked
+        not.be.checked
+        have.text
 
 2) explicit <-- need to write explicity
 
-    .expect()
+    .expect(value)
         .to.equal
         .to.notEqual
 
-    .assert()
+    .assert(value, otherValue)
         .equal
         .notEqual
