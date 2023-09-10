@@ -75,3 +75,22 @@ Assertions
     .assert(value, otherValue)
         .equal
         .notEqual
+
+
+
+trigger
+-------
+
+.trigger()
+    'mouseover'
+    'mousedown'
+    'contextmenu' or .rightclick()
+    'dblclick' <-- double click or you can just type .dblclick()
+
+
+.scrollIntoView()
+.scrollIntoView({duration:miliseconds})
+
+.attachFile(file)
+
+cy.get('upload element').attachFile('file', {subjectType:'drag-n-drop'}) <-- for drag and drop

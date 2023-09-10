@@ -28,6 +28,9 @@
 /// <reference types='cypress-xpath' />
 
 import 'cypress-iframe'
+require ('@4tw/cypress-drag-drop')
+require ('cypress-file-upload')
+
 
 
 
@@ -38,3 +41,8 @@ Cypress.Commands.add('frameChange', (frame) => {
 
 
 
+Cypress.Commands.add('linkClink', (name) => {
+
+    cy.get('a').contains(name).click()
+
+});
