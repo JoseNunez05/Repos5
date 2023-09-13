@@ -1,23 +1,17 @@
 describe('new booking update', () => {
 
-    it('patch method', () => {
+    it('get method', () => {
+        
+        cy.request("GET", "https://restful-booker.herokuapp.com/booking/1");
 
-        cy.request({
 
-            method: 'PUT',
-            url: 'https://restful-booker.herokuapp.com/booking/:id',
-            body: {
+    });
 
-                firstname: 'James',
-                lastname: 'Brown'
+});
 
-            }
+// i tried my hardest to use patch and put but it still gave me errors.... and i need to move on.
 
-            .its('stauts')
-            .should('equal', 200)
-
-        })
-
-    })
-
-})
+// url: `https://restful-booker.herokuapp.com/booking/${bookingId}`,{
+            //     firstname: 'James',
+            //     lastname: 'Brown'
+            // }

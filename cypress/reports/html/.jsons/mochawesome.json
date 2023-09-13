@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-09-11T17:17:01.312Z",
+    "end": "2023-09-11T17:17:01.956Z",
+    "duration": 644,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "810b3741-8fdd-46ef-961f-828724aae3e5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\API Tests (codingTemple)\\createBooking_spec.cy.js",
+      "file": "cypress\\e2e\\API Tests (codingTemple)\\createBooking_spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "baf2d99f-2e5b-4968-afe4-29b9d09b3f1f",
+          "title": "HTTP Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET thing",
+              "fullTitle": "HTTP Requests GET thing",
+              "timedOut": null,
+              "duration": 409,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\API Tests (codingTemple)\\\\createBooking_spec.cy.js\"\n}",
+              "code": "cy.request('GET', 'https://restful-booker.herokuapp.com/apidoc/index.html').its('status').should('equal', 200);",
+              "err": {},
+              "uuid": "92a88dfb-eeed-4451-853d-a08498055710",
+              "parentUUID": "baf2d99f-2e5b-4968-afe4-29b9d09b3f1f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Post Call",
+              "fullTitle": "HTTP Requests Post Call",
+              "timedOut": null,
+              "duration": 216,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\API Tests (codingTemple)\\\\createBooking_spec.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\API Tests (codingTemple)\\\\createBooking_spec.cy.js\\\\HTTP Requests -- Post Call (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.request({\n  method: 'POST',\n  url: 'https://restful-booker.herokuapp.com/booking',\n  body: {\n    firstname: \"Jim\",\n    lastname: \"Brown\",\n    totalprice: 111,\n    depositpaid: true,\n    bookingdates: {\n      checkin: \"2018-01-01\",\n      checkout: \"2019-01-01\"\n    }\n  }.its('status').should('equal', 200)\n});",
+              "err": {
+                "message": "TypeError: {(intermediate value)(intermediate value)(intermediate value)(intermediate value)(intermediate value)}.its is not a function",
+                "estack": "TypeError: {(intermediate value)(intermediate value)(intermediate value)(intermediate value)(intermediate value)}.its is not a function\n    at Context.eval (http://localhost:2707/__cypress/tests?p=cypress\\e2e\\API%20Tests%20codingTemple\\createBooking_spec.cy.js:26:9)",
+                "diff": null
+              },
+              "uuid": "9d2bb99e-a0f0-47b4-8f04-9e65113bb0ce",
+              "parentUUID": "baf2d99f-2e5b-4968-afe4-29b9d09b3f1f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "92a88dfb-eeed-4451-853d-a08498055710"
+          ],
+          "failures": [
+            "9d2bb99e-a0f0-47b4-8f04-9e65113bb0ce"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 625,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
