@@ -1,17 +1,26 @@
 describe('new booking update', () => {
 
-    it('get method', () => {
+    it('PATCH method', () => {
         
-        cy.request("GET", "https://restful-booker.herokuapp.com/booking/1");
+        cy.request({
 
+            method: "PATCH",
+            url: 'https://restful-booker.herokuapp.com/booking/1',
+            headers:
+            {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Cookie': 'token=60b2eba9971d991'
+            },
+            body: 
+            {
+                firstname : "James",
+                lastname : "Brown"   
+            }
+        });
 
     });
-
 });
 
-// i tried my hardest to use patch and put but it still gave me errors.... and i need to move on.
 
-// url: `https://restful-booker.herokuapp.com/booking/${bookingId}`,{
-            //     firstname: 'James',
-            //     lastname: 'Brown'
-            // }
+// IT FINALLY F*****G WORKED!!!!!!!!!!!!!!!!!!!!!!!!!!

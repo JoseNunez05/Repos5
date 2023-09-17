@@ -54,6 +54,8 @@ describe('dropdowns', () => {
 
                         // if the text value of the element is equal to "cypress automation tool" then perform the following actions
                         if($el.text() == "cypress automation tool"){
+                            // the wrap element is used to compact complex elements
+                            // so that cypress can esaily handle them.
                             cy.wrap($el).click()
                         }
 

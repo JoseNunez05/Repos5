@@ -1,20 +1,27 @@
-describe("ddt demo", () => {
+describe("data driven test", () => {
 
-    it('data driven test', () => {
+    beforeEach('visit site', () => {
+        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    })
 
-        cy.fixture("exampleLogin.json").then( (data) => {
-            cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
+    // direct access
+    it.skip('fixture test', () => {
 
-            data.array.foreach((userdata) => {
-                
-                cy.get("input[placeholder='Username']").type(userdata.username)
-                cy.get("input[placeholder='Password']").type(userdata.password)
+        // passing the fixture file into the 'data' parameter
+        cy.fixture('orangehrm.json').then((data) => {
+            cy.get("input[placeholder='Username']").type(data.username);
+            cy.get("input[placeholder='Password']").type(data.password);
+        })
+    })
 
-                cy.get("button[type='submit']").click();
-
+        it.only('fixtures as array test', () => {
+            cy.fixture('login2.json').then((data) => {
+                // let credentials=data;
+                data.forEach((credentials) => {
+                    cy.get("input[placeholder='Username']").type(credentials.username);
+                    cy.get("input[placeholder='Password']").type(credentials.password);
+                });
             });
-
         });
 
-    });
-});
+})

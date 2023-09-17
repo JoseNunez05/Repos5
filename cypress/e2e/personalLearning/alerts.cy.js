@@ -52,14 +52,14 @@ describe('alerts demo', () => {
 
             it('prompt alerts', () => {
 
-                cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
+                cy.visit('https://the-internet.herokuapp.com/javascript_alerts');
                 Cypress.on('uncaught:exception', (err, runnable) => {
                     return false
-                })
+                });
 
                 cy.window().then((w) => {
                     cy.stub(w, 'prompt').returns('type shit');
-                })
+                });
                 cy.get('button[onclick="jsPrompt()"]').click();
 
                 //cypress will still click ok by default
