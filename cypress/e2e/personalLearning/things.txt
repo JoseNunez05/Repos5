@@ -94,3 +94,26 @@ trigger
 .attachFile(file)
 
 cy.get('upload element').attachFile('file', {subjectType:'drag-n-drop'}) <-- for drag and drop
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----REVIEW-----
+1) .then() and javaScript promises.  ✔
+2) implicit and explicit assertions.  ✔
+3) .invoke() method ✔
+4) .stub() method 
+5) iframe methods -.find() .its()   ✔
+6) .substring() / .substr() method
+7) mouse actions
+8) .drag() method
+9) .attachFile method

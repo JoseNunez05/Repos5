@@ -79,7 +79,7 @@ describe('alerts demo', () => {
             })
 
                 // authenticated alerts
-                it.only('authenticated alerts', () => {
+                it('authenticated alerts', () => {
 
                     cy.wait(20000)
                     cy.visit('https://the-internet.herokuapp.com/basic_auth')
